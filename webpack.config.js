@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './main.ts',
+  entry: ['babel-polyfill', './main.ts'], // async/await needs babel-polyfill
   output: {
     filename: 'bundle.js'
   },
