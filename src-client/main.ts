@@ -6,7 +6,7 @@ let message = "this message should be shown between 'start' and 'end'.";
   console.log("start async");
   
   await new Promise(resolve => {
-    setTimeout(resolve, 2000);
+    setTimeout(resolve, 4000);
   });
   console.log(message);
   

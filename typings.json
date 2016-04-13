@@ -1,0 +1,15 @@
+{
+  "name": "webpack-typescript-angular2-1",
+  "version": false,
+  "dependencies": {
+    "lodash": "registry:npm/lodash#4.0.0+20160412191219"
+  },
+  "ambientDependencies": {
+    "express": "registry:dt/express#4.0.0+20160317120654",
+    "falcor": "registry:dt/falcor#0.1.17+20160412151557",
+    "falcor-express": "registry:dt/falcor-express#0.1.2+20160412151557",
+    "falcor-router": "registry:dt/falcor-router#0.4.0+20160412151557",
+    "node": "registry:dt/node#4.0.0+20160412142033",
+    "serve-static": "registry:dt/serve-static#1.7.1+20160104095738"
+  }
+}
