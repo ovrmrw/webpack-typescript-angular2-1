@@ -1,5 +1,5 @@
 module.exports = {
-  entry: ['babel-polyfill', './src-client/main.ts'], // async/await needs babel-polyfill
+  entry: ['babel-polyfill', './src-client/boot.ts'], // async/await needs babel-polyfill
   output: {
     filename: './src-client/bundle.js'
   },
@@ -14,7 +14,7 @@ module.exports = {
       {
         test: /\.ts$/,
         exclude: [/node_modules/, /typings/, /src-server/],
-        loader: 'babel-loader!ts-loader' // first ts-loader(with tsconfig.json), second babel-loader(with .babelrc)
+        loader: 'babel-loader!ts-loader' // first ts-loader(with tsconfig.json), second babel-loader(with .babelrc)        
       }
     ]
   }

@@ -5,6 +5,7 @@ const ts = require('gulp-typescript');
 const plumber = require('gulp-plumber');
 const babel = require('gulp-babel');
 const ignore = require('gulp-ignore');
+const browserSync = require('browser-sync').create();
 
 /////////////////////////////////////////////////////////////////////////
 // TypeScript Compile
@@ -22,8 +23,22 @@ gulp.task('tsc', () => {
     .pipe(gulp.dest('.'));
 });
 
-gulp.task('compile', ['tsc']);
-
-gulp.task('watch', ['compile'], () => {
+gulp.task('watch', ['tsc'], () => {
   gulp.watch(tscTargetGlobs, ['tsc']);
+});
+
+
+/////////////////////////////////////////////////////////////////////////
+// EXPRESS
+
+gulp.task('browsersync', function () {
+  browserSync.init({
+    files: ['views/**/*', 'src-client/**/*.js'], // BrowserSyncにまかせるファイル群
+    proxy: 'http://localhost:3000',  // express の動作するポートにプロキシ
+    port: 4000,  // BrowserSync は 4000 番ポートで起動
+    open: true,  // ブラウザ open する
+    reloadDelay: 1000 * 2,
+    //reloadDebounce: 1000 * 2,
+    ghostMode: false
+  });
 });
