@@ -16,3 +16,8 @@ npm run watch
 ```
 npm start
 ```
+
+(Description)  
+/sample/bundle.js is generated from /sample/main.ts with Webpack build.  
+main.ts -> tsc(es2015) -> babel(es5) -> bundle.js  
+bundle.js also includes babel-polyfill to run async/await function. 

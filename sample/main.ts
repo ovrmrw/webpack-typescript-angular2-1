@@ -1,4 +1,4 @@
-// import 'babel-polyfill'; // moved to webpack.config.js
+import 'babel-polyfill/dist/polyfill.min';
 
 let message = "this message should be shown between 'start' and 'end'.";
 

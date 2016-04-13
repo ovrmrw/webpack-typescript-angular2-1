@@ -33,7 +33,7 @@ gulp.task('watch', ['tsc'], () => {
 
 gulp.task('browsersync', function () {
   browserSync.init({
-    files: ['views/**/*', 'src-client/**/*.js'], // BrowserSyncにまかせるファイル群
+    files: ['views/**/*', 'app/**/*', 'src-client/**/*'], // BrowserSyncにまかせるファイル群
     proxy: 'http://localhost:3000',  // express の動作するポートにプロキシ
     port: 4000,  // BrowserSync は 4000 番ポートで起動
     open: true,  // ブラウザ open する

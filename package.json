@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src-client/bundle.js",
+    "start": "node ./sample/bundle.js",
     "watch": "webpack --watch",
     "nf": "nf start",
     "test": "echo \"Error: no test specified\" && exit 1"
