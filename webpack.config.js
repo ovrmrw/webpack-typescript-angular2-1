@@ -4,7 +4,7 @@ module.exports = [
   {
     entry: ['./sample/main.ts'],
     output: {
-      filename: './sample/bundle.js'
+      filename: './bundles/bundle.sample.js'
     },
     resolve: {
       extensions: ['', '.ts', '.js']
@@ -24,7 +24,7 @@ module.exports = [
   }, {
     entry: ['./src-client/boot.ts'],
     output: {
-      filename: './src-client/bundle.js'
+      filename: './bundles/bundle.client.js'
     },
     resolve: {
       extensions: ['', '.ts', '.js']
@@ -44,7 +44,7 @@ module.exports = [
   }, {
     entry: ['./app/main.ts'],
     output: {
-      filename: './app/bundle.js'
+      filename: './bundles/bundle.app.js'
     },
     resolve: {
       extensions: ['', '.ts', '.js']
